@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie d'images</title>
+  <title>Galerie d'Images</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,18 +40,22 @@
     <h1>Galerie d'Images</h1>
   </header>
 
-  <section class="gallery">
-    src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img1.png" alt="Image 1">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img2.png" alt="Image 2">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img3.png" alt="Image 3">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img4.png" alt="Image 4">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img5.png" alt="Image 5">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img6.png" alt="Image 6">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img7.png" alt="Image 7">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img8.png" alt="Image 8">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img9.png" alt="Image 9">
-    <img src="https://raw.githubusercontent.com/peace4best/image-galerie/main/img10.png" alt="Image 10">
+  <section class="gallery" id="gallery">
+    <!-- Les images seront générées ici automatiquement -->
   </section>
-  
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const baseURL = 'https://raw.githubusercontent.com/peace4best/image-galerie/main/';
+    const totalImages = 10; // nombre total d'images
+
+    for(let i = 1; i <= totalImages; i++){
+      const img = document.createElement('img');
+      img.src = `${baseURL}img${i}.png`;
+      img.alt = `Image ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+
 </body>
 </html>
